@@ -26,7 +26,7 @@
       <p class="section-description">Completa el formulario para que nuestro equipo revise tu dispositivo</p>
       
       <form class="contact-form" id="ingresoForm" novalidate>
-        <fieldset>
+        <fieldset class="form-section">
           <legend>Datos del cliente</legend>
 
           <div class="form-grid">
@@ -55,11 +55,11 @@
               <input type="tel" id="telefono" name="telefono" required placeholder="Ej: +54 9 11 1234 5678">
             </div>
 
-            <div class="form-group form-radio-group">
-              <p>Tipo de cliente *</p>
-              <label><input type="radio" name="cliente_tipo" value="particular" checked> Particular</label>
-              <label><input type="radio" name="cliente_tipo" value="empresa"> Empresa</label>
-            </div>
+            <fieldset class="form-group form-radio-group" aria-required="true">
+            <legend>Tipo de cliente *</legend>
+            <label><input type="radio" name="cliente_tipo" value="particular" checked> Particular</label>
+            <label><input type="radio" name="cliente_tipo" value="empresa"> Empresa</label>
+          </fieldset>
           </div>
 
           <div class="conditional-field hidden" id="empresaFields">
@@ -101,7 +101,7 @@
           </div>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="form-section">
           <legend>Datos del equipo</legend>
 
           <div class="form-grid">
@@ -174,10 +174,12 @@
                 <option>No aplica / No sabe</option>
               </select>
             </div>
-            <div class="form-group form-checkbox-group">
-              <label><input type="checkbox" id="garantia" name="garantia"> El equipo tiene garantía vigente del fabricante</label>
-            </div>
           </div>
+
+          <fieldset class="form-group form-checkbox-group">
+            <legend>Garantía del fabricante</legend>
+            <label><input type="checkbox" id="garantia" name="garantia"> El equipo tiene garantía vigente del fabricante</label>
+          </fieldset>
 
           <div class="conditional-field hidden" id="garantiaField">
             <div class="form-group">
@@ -192,7 +194,7 @@
           </div>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="form-section">
           <legend>Descripción del problema</legend>
 
           <div class="form-grid">
@@ -234,9 +236,10 @@
             <div class="counter"><span id="problema_count">0</span>/500 caracteres</div>
           </div>
 
-          <div class="form-group form-checkbox-group">
+          <fieldset class="form-group form-checkbox-group">
+            <legend>Intentos previos</legend>
             <label><input type="checkbox" id="ya_intento" name="ya_intento"> El cliente ya intentó repararlo o lo llevó a otro técnico</label>
-          </div>
+          </fieldset>
 
           <div class="conditional-field hidden" id="intentoField">
             <div class="form-group">
@@ -247,14 +250,14 @@
           </div>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="form-section">
           <legend>Preferencias de entrega y confirmación</legend>
 
-          <div class="form-group form-radio-group">
-            <p>Modalidad de entrega del equipo *</p>
+          <fieldset class="form-group form-radio-group" aria-required="true">
+            <legend>Modalidad de entrega del equipo *</legend>
             <label><input type="radio" name="entrega_modalidad" value="local" required> Lo llevo personalmente al local</label>
             <label><input type="radio" name="entrega_modalidad" value="domicilio" required> Solicito retiro a domicilio</label>
-          </div>
+          </fieldset>
 
           <div class="conditional-field hidden" id="direccionField">
             <div class="form-group">
@@ -275,13 +278,13 @@
             </select>
           </div>
 
-          <div class="form-group form-checkbox-group contact-preference-group">
-            <p>Preferencia de contacto para notificaciones *</p>
+          <fieldset class="form-group form-checkbox-group contact-preference-group" aria-required="true">
+            <legend>Preferencia de contacto para notificaciones *</legend>
             <label><input type="checkbox" name="preferencia_contacto" value="whatsapp"> WhatsApp</label>
             <label><input type="checkbox" name="preferencia_contacto" value="correo"> Correo electrónico</label>
             <label><input type="checkbox" name="preferencia_contacto" value="llamada"> Llamada telefónica</label>
             <p class="help-text warning" id="preferenciaWarning">Selecciona al menos una forma de contacto.</p>
-          </div>
+          </fieldset>
 
           <div class="form-group">
             <label for="horario_contacto">Horario preferido para ser contactado *</label>
@@ -325,7 +328,7 @@
     }
 
     .contact-form {
-      max-width: 900px;
+      max-width: 750px;
       margin: 0 auto;
       background: #ffffff;
       padding: 2rem;
@@ -389,6 +392,37 @@
     .form-group textarea {
       resize: vertical;
       min-height: 120px;
+    }
+
+    fieldset.form-group {
+      border: 1px solid #cbd5e1;
+      border-radius: 14px;
+      padding: 1rem 1.25rem 1.25rem;
+      margin-bottom: 1.25rem;
+      background: #f8fafc;
+    }
+
+    fieldset.form-group legend {
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 0.75rem;
+      padding: 0 0.25rem;
+    }
+
+    .contact-form .form-section {
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 1.25rem 1.3rem;
+      margin-bottom: 1.5rem;
+      background-color: #ffffff;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+    }
+
+    .contact-form .section-heading {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #102a43;
     }
 
     .form-radio-group,
