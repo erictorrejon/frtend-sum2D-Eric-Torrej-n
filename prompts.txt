@@ -70,11 +70,32 @@ Etapa del proyecto: [ETAPA 1]
 
 Fecha: 20/05/2026
 
-PROMPT ENVIADO A COPILOT: 
+PROMPT ENVIADO A COPILOT: Ahora haremos la sección de testimonios
 
-RESPUESTA RECIBIDA: 
+tiene que estar el nombre del cliente, tipo de servicio recibido, texto del comentario y clacificación.
 
-USO EN EL PROYECTO: 
+En la parte del FOOTER
+debe de ir:
+- Nombre y logo del servicio tecnico.
+- Horarios de atencion presencial y remota.
+- Direccion, email, telefono y WhatsApp ficticios.
+- Links a redes sociales (pueden ser placeholders).
+- Ana de copyright.
 
-REFLEXIÓN PERSONAL: 
+IPORTANTE: REQUISITOS DE ESTILO
+- Paleta de colores que transmita tecnología y confianza. Definir al menos tres colores como variables CSS, ejemplos(azul oscuro, gris, blanco, algun
+color de acento).
+-Minimo dos tipografias: una moderna para titulos y otra legible para cuerpo.
+-Las tarjetas de servicios deben tener efecto hover con transicion suave.
+-La tabla de precios debe tener estilos CSS propios: cabecera con color, filas alternadas con
+fondo diferente y bordes definidos.
+-El sitio debe adaptarse a pantallas moviles: los elementos se apilan en una sola columna y
+la tabla es horizontalmente desplazable si no entra en pantalla.
+
+RESPUESTA RECIBIDA: recibi lo que pedí por parte de copilot
+
+USO EN EL PROYECTO: utilicé lo que me dio copilot, este me dio lo que pedi ya que el prompt que le entregué fue bien específico en algunas secciones
+
+REFLEXIÓN PERSONAL: Utilicé lo primero que me entregó copilot ya que sigue entregando una página con un objetivo claro y es justamente el que le estoy 
+dando a la página.
 ======================================================================================================================================================
