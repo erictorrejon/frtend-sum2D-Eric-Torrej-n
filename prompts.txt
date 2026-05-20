@@ -99,3 +99,176 @@ USO EN EL PROYECTO: utilicé lo que me dio copilot, este me dio lo que pedi ya q
 REFLEXIÓN PERSONAL: Utilicé lo primero que me entregó copilot ya que sigue entregando una página con un objetivo claro y es justamente el que le estoy 
 dando a la página.
 ======================================================================================================================================================
+
+======================================================================================================================================================
+Etapa del proyecto: [ETAPA 2] 
+
+Fecha: 20/05/2026
+
+PROMPT ENVIADO A COPILOT: haz una correccion en la seccion de ingreso, agrega estos datos en las siguientes secciones:
+DATOS DEL CLIENTE
+- Nombre completo (input text, requerido).
+Evaluacion Sumativa 2 | Desarrollo Web HTML & JS Servicio Tecnico TechFix
+Programacion Web | Pagina 6
+- DNI (input text, requerido).
+- Correo electronico (input email, requerido).
+- Confirmar correo electronico (input email, requerido).
+- Telefono de contacto (input tel, requerido).
+- Tipo de cliente (radio buttons: Particular, Empresa). Si se elige "Empresa", mostrar un
+campo adicional para el nombre de la empresa y el CUIT.
+- Provincia (select con al menos 10 provincias argentinas, requerido).
+- Localidad (input text, requerido).
+
+DATOS DEL EQUIPO
+- Tipo de dispositivo (select: Notebook, Computador de escritorio, Impresora, Tablet,
+Telefono movil, Otro, requerido). Si se elige "Otro", mostrar un campo de texto para
+especificar.
+- Marca (select con las marcas de la Etapa 1 mas la opcion "Otra", requerido). Si se elige
+"Otra", mostrar campo de texto.
+- Modelo (input text, requerido).
+- Numero de serie o IMEI (input text, opcional, con nota aclaratoria de donde encontrarlo).
+- Sistema operativo (select: Windows 10, Windows 11, macOS, Linux, Android, iOS, No
+aplica / No sabe, requerido).
+- El equipo tiene garantia vigente del fabricante (checkbox). Si esta marcado, mostrar campo
+de texto para ingresar el numero de orden de compra o fecha de compra.
+- El equipo contiene datos importantes sin respaldo (checkbox, con advertencia visible de
+que TechFix no se responsabiliza por perdida de datos).
+
+DESCRIPCIÓN DEL PROBLEMA
+- Tipo de problema principal (select: No enciende, Pantalla danada, Lentitud o rendimiento,
+Virus o malware, Problema de red o conectividad, Danio por liquido, Sonido, Otro,
+requerido).
+- Desde cuando ocurre el problema (select: Hoy, Hace algunos dias, Hace semanas, Hace
+meses, requerido).
+- El problema es permanente o intermitente (radio buttons: Permanente, Intermitente,
+requerido).
+- Descripcion detallada del problema (textarea, minimo 20 caracteres, maximo 500
+caracteres, con contador, requerido).
+- El cliente ya intento repararlo o lo llevo a otro tecnico (checkbox). Si esta marcado, mostrar
+textarea para que describa que se hizo anteriormente (opcional, maximo 300 caracteres,
+con contador).
+
+PREFERENCIAS DE ENTREGA Y CONFIRMACIÓN
+- Modalidad de entrega del equipo (radio buttons: Lo llevo personalmente al local, Solicito
+retiro a domicilio, requerido). Si se elige retiro a domicilio, mostrar campo de texto con la
+direccion completa.
+- Presupuesto maximo autorizado sin consulta previa (select: Hasta $5.000, Hasta $15.000,
+Hasta $30.000, Sin limite, Necesito consultar antes de aprobar cualquier gasto, requerido).
+- Preferencia de contacto para notificaciones (checkboxes: WhatsApp, Correo electronico,
+Llamada telefonica). Al menos una debe seleccionarse.
+- Horario preferido para ser contactado (select: Manana 9 a 12, Tarde 12 a 17, Tarde-noche
+17 a 20, Indistinto, requerido).
+- El cliente acepta que el diagnostico puede demorar hasta 48 horas habiles (checkbox
+obligatorio).
+- Acepta los Terminos y Condiciones del servicio (checkbox obligatorio, con enlace a pagina ficticia)
+
+BOTONES DE ACCION
+- Boton principal "Registrar ingreso" (submit), centrado y con estilo destacado.
+- Boton secundario "Limpiar" (reset).
+- Enlace "Volver al inicio" que redirija a index.html.
+
+RESPUESTA RECIBIDA: Me entregó la seccion de formulario corregida
+
+USO EN EL PROYECTO: Utilicé la seccion corregida sin corregir, valga la rebundancia,  ni solicitar algo más ya que me entregó una página de formulario 
+bien completa y con una estructura bien definida de primeras. Me quedé con este primer prototipo ya que lo que se me entregó es exatcamente
+el prototipo de base que buscaba
+
+REFLEXIÓN PERSONAL: me fue útil el prompt ya que me esmeré harto en darle un prompt completo y de primeras con 
+indicacionea a seguir, obtuve lo que esperaba.
+======================================================================================================================================================
+
+======================================================================================================================================================
+Etapa del proyecto: [ETAPA 2] 
+
+Fecha: 20/05/2026
+
+PROMPT ENVIADO A COPILOT: IMPORTANTE: REQUISITOS DE ESTILO Y ACCESIBILIDAD
+- Los campos deben cambiar visualmente al recibir el foco (:focus): borde con color y sombra
+suave.
+- Preparar las clases CSS "campo-error" (borde rojo) y "campo-ok" (borde verde) para la
+Etapa 3.
+- Las cuatro secciones deben estar visualmente separadas: fondo diferente, borde
+redondeado o titulo de seccion destacado.
+- El formulario debe estar centrado con un ancho maximo de 750 pixeles.
+- Diseno responsivo: dos columnas en desktop, una columna en mobile.
+- Todos los campos deben tener su etiqueta <label> asociada. Los requeridos deben
+marcarse con asterisco.
+- Los grupos de radio buttons y checkboxes deben estar dentro de <fieldset> con <legend>
+
+RESPUESTA RECIBIDA: recibi lo que pedí por parte de copilot
+
+USO EN EL PROYECTO: Utilicé lo entregado ya que fue justamente lo pedido en el prompt, hice un par de correcciones superficiales que no influian en nada
+solo eran por estilo visual
+
+REFLEXIÓN PERSONAL: Utilicé lo primero que me entregó copilot ya que este me dio lo solicitado por el extenso prompt, a su vez directo y bien específico
+======================================================================================================================================================
+
+======================================================================================================================================================
+Etapa del proyecto: [ETAPA 3] 
+
+Fecha: 20/05/2026
+
+PROMPT ENVIADO A COPILOT: ahora harás la etapa de Validación de formulario con JAVASCRIPT, ESTE TIENE QUE SER CON JAVASCRIPT NATIVO, NO SE PERMITEN LIBRERIAS EXTERNAS DE VALIDACION
+
+OBJETIVO:
+Agregar el archivo validaciones.js que intercepte el envio del formulario, aplique todas las reglas de
+validacion y proporcione retroalimentacion visual inmediata. Si el formulario pasa todas las
+validaciones, debe mostrarse una pantalla de confirmacion de ingreso con un numero de orden
+generado aleatoriamente.
+
+REGLAS Y VALIDACION REQUERIDAS:
+Nombre completo Solo letras y espacios. Minimo 5 caracteres, maximo 80.
+DNI Solo numeros. Entre 7 y 8 digitos.
+Correo electronico Formato valido con @ y dominio. Usar expresion regular.
+Confirmar correo Debe coincidir exactamente con el correo electronico.
+Telefono Solo digitos, guiones, espacios y signo mas (+). Minimo 8 digitos
+numericos.
+Tipo de cliente Debe seleccionarse una opcion. Si es "Empresa", el nombre de
+empresa y el CUIT no pueden estar vacios. El CUIT debe tener el
+formato ##-########-# (con guiones) o 11 digitos numericos
+seguidos.
+Provincia y Localidad Provincia: seleccion obligatoria. Localidad: no puede estar vacia,
+minimo 2 caracteres.
+
+DATOS DEL EQUIPO
+Tipo de dispositivo Seleccion obligatoria. Si es "Otro", el campo de texto no puede estar
+vacio.
+Marca Seleccion obligatoria. Si es "Otra", el campo de texto no puede estar
+vacio.
+Modelo No puede estar vacio. Minimo 2 caracteres.
+Sistema operativo Seleccion obligatoria.
+Numero de orden (garantia) Si el checkbox de garantia esta marcado, el campo de numero de
+orden no puede estar vacio.
+
+DESCRIPCION DEL PROBLEMA
+Tipo de problema Seleccion obligatoria.
+Desde cuando Seleccion obligatoria.
+Permanente o intermitente Debe seleccionarse una opcion de radio button.
+
+
+Descripcion detallada No puede estar vacia. Minimo 20 caracteres, maximo 500.
+Reparacion previa (textarea) Solo se validA SI EL CHECKBOX ESTA MARCADO, NO PUEDE SUPERAR LOS 3OO CARACTERES.
+
+
+RESPUESTA RECIBIDA: recibi lo que pedí por parte de copilot
+
+USO EN EL PROYECTO: Utilicé lo entregado ya que fue justamente lo pedido en el prompt, hice un par de correcciones superficiales que no influian en nada
+solo eran por estilo visual, me dio justo lo que entregaba por el prompt extenso y directp con indicaciones concretas.
+
+REFLEXIÓN PERSONAL: Utilicé lo primero que me entregó copilot ya que este me dio lo solicitado por el extenso prompt, a su vez directo y bien específico
+======================================================================================================================================================
+
+======================================================================================================================================================
+Etapa del proyecto: [ETAPA 3] 
+
+Fecha: 20/05/2026
+
+PROMPT ENVIADO A COPILOT: 
+
+
+RESPUESTA RECIBIDA: recibi lo que pedí por parte de copilot
+
+USO EN EL PROYECTO: 
+
+REFLEXIÓN PERSONAL: 
+======================================================================================================================================================

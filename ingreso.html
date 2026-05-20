@@ -312,6 +312,16 @@
           <a href="index.html" class="button link-btn">Volver al inicio</a>
         </div>
       </form>
+
+      <div id="confirmationScreen" class="confirmation-screen hidden" role="status" aria-live="polite">
+        <h2>Ingreso registrado</h2>
+        <p>Tu solicitud se recibió correctamente. Conserva este número de orden para seguimiento.</p>
+        <div class="confirmation-number" id="orderNumber">ORD-000000</div>
+        <div class="form-actions">
+          <button type="button" id="newEntryButton" class="button primary-btn">Registrar otro ingreso</button>
+          <a href="index.html" class="button secondary-btn">Volver al inicio</a>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -448,6 +458,69 @@
       font-size: 0.95rem;
     }
 
+    .field-error-message {
+      margin-top: 0.35rem;
+      color: #b91c1c;
+      font-size: 0.92rem;
+    }
+
+    .campo-error input,
+    .campo-error select,
+    .campo-error textarea {
+      border-color: #ef4444;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
+    }
+
+    .campo-ok input,
+    .campo-ok select,
+    .campo-ok textarea {
+      border-color: #22c55e;
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.12);
+    }
+
+    .campo-error legend,
+    .campo-error label {
+      color: #b91c1c;
+    }
+
+    .confirmation-screen {
+      border: 1px solid #cbd5e1;
+      background: #f8fafc;
+      border-radius: 18px;
+      padding: 1.75rem 1.5rem;
+      margin-top: 1.5rem;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    .confirmation-screen.hidden {
+      display: none;
+    }
+
+    .confirmation-screen h2 {
+      margin: 0 0 0.75rem;
+      color: #0f172a;
+    }
+
+    .confirmation-screen p {
+      margin: 0 auto 1rem;
+      max-width: 520px;
+      color: #334155;
+    }
+
+    .confirmation-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+      padding: 1rem 1.3rem;
+      background: #0f4fd4;
+      color: #ffffff;
+      border-radius: 999px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
     .help-text.warning {
       color: #b45309;
       display: none;
@@ -528,67 +601,7 @@
     }
   </style>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const clienteRadios = document.querySelectorAll('input[name="cliente_tipo"]');
-      const empresaFields = document.getElementById('empresaFields');
-      const tipoEquipo = document.getElementById('tipo_equipo');
-      const otroEquipoField = document.getElementById('otroEquipoField');
-      const marcaEquipo = document.getElementById('marca_equipo');
-      const otraMarcaField = document.getElementById('otraMarcaField');
-      const garantia = document.getElementById('garantia');
-      const garantiaField = document.getElementById('garantiaField');
-      const yaIntento = document.getElementById('ya_intento');
-      const intentoField = document.getElementById('intentoField');
-      const entregaRadios = document.querySelectorAll('input[name="entrega_modalidad"]');
-      const direccionField = document.getElementById('direccionField');
-      const problemaDetalle = document.getElementById('problema_detalle');
-      const problemaCount = document.getElementById('problema_count');
-      const intentoDetalle = document.getElementById('intento_detalle');
-      const intentoCount = document.getElementById('intento_count');
-      const form = document.getElementById('ingresoForm');
-      const contactoChecks = document.querySelectorAll('input[name="preferencia_contacto"]');
-      const preferenciaWarning = document.getElementById('preferenciaWarning');
-
-      function toggleEmpresaFields() {
-        const esEmpresa = document.querySelector('input[name="cliente_tipo"]:checked').value === 'empresa';
-        empresaFields.classList.toggle('hidden', !esEmpresa);
-        empresaFields.querySelectorAll('input').forEach(input => {
-          input.required = esEmpresa;
-        });
-      }
-
-      function toggleOtroEquipo() {
-        const mostrar = tipoEquipo.value === 'otro';
-        otroEquipoField.classList.toggle('hidden', !mostrar);
-        document.getElementById('otro_equipo').required = mostrar;
-      }
-
-      function toggleOtraMarca() {
-        const mostrar = marcaEquipo.value === 'Otra';
-        otraMarcaField.classList.toggle('hidden', !mostrar);
-        document.getElementById('otra_marca').required = mostrar;
-      }
-
-      function toggleGarantiaField() {
-        garantiaField.classList.toggle('hidden', !garantia.checked);
-        document.getElementById('garantia_detalle').required = garantia.checked;
-      }
-
-      function toggleIntentoField() {
-        intentoField.classList.toggle('hidden', !yaIntento.checked);
-        document.getElementById('intento_detalle').required = false;
-      }
-
-      function toggleDireccionField() {
-        const domicilio = document.querySelector('input[name="entrega_modalidad"]:checked')?.value === 'domicilio';
-        direccionField.classList.toggle('hidden', !domicilio);
-        document.getElementById('direccion').required = domicilio;
-      }
-
-      function updateCounter(textarea, counter) {
-        counter.textContent = textarea.value.length;
-      }
+  <script src="validaciones.js" defer></script>
 
       clienteRadios.forEach(radio => radio.addEventListener('change', toggleEmpresaFields));
       tipoEquipo.addEventListener('change', toggleOtroEquipo);
