@@ -1,0 +1,374 @@
+﻿* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f3f6fb;
+  color: #111827;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #0d1b33;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+}
+
+.main-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav a {
+  color: #d8e1ff;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  background: rgba(221, 229, 255, 0.13);
+  color: #ffffff;
+}
+
+.main-nav .cta {
+  background: #ff8c42;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.hero {
+  position: relative;
+  min-height: 72vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #0d1b33 0%, #13294d 48%, #1f3f7a 100%);
+  background-attachment: fixed;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 720px;
+  z-index: 2;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin: 0 0 1rem;
+  font-weight: 700;
+}
+
+.hero-slogan {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: #ff8c42;
+}
+
+.hero-description {
+  margin: 0 auto 2rem;
+  max-width: 640px;
+  color: #d8e1ff;
+  font-size: 1.05rem;
+}
+
+.primary-btn {
+  display: inline-block;
+  background: #ff8c42;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.primary-btn:hover {
+  background: #ff9e5a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(255, 140, 66, 0.3);
+}
+
+.trust-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  z-index: 2;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.indicator-icon {
+  font-size: 2.5rem;
+  background: rgba(255, 140, 66, 0.2);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #ff8c42;
+}
+
+.indicator p {
+  margin: 0;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.button {
+  display: inline-block;
+  background: #ff8c42;
+  color: #ffffff;
+  padding: 1rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: background 0.25s ease;
+}
+
+.button:hover {
+  background: #ff9e5a;
+}
+
+.section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #0d1b33;
+}
+
+.section-description {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(22, 43, 86, 0.1);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.card-time {
+  display: block;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+  font-weight: 600;
+  color: #ff8c42;
+  font-size: 0.9rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 1.6rem;
+  box-shadow: 0 18px 45px rgba(22, 43, 86, 0.06);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #0e2b5b;
+}
+
+.precios p,
+.nosotros p,
+.ingresar p {
+  max-width: 720px;
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.brand-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(22, 43, 86, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.brand-item:hover {
+  box-shadow: 0 8px 24px rgba(22, 43, 86, 0.15);
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, #f3f6fb 0%, #e8f0fb 100%);
+}
+
+.brand-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.brand-item p {
+  margin: 0;
+  font-weight: 600;
+  color: #0d1b33;
+  font-size: 1rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(22, 43, 86, 0.08);
+}
+
+.price-table thead {
+  background: #0d1b33;
+  color: #ffffff;
+}
+
+.price-table th {
+  padding: 1.2rem;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.price-table td {
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.price-table tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+.price-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.price-table tbody tr:hover {
+  background: #f3f6fb;
+}
+
+.secondary {
+  background: #1f3f7a;
+}
+
+.site-footer {
+  padding: 1.5rem 2rem;
+  text-align: center;
+  background: #081227;
+  color: #c8d2e8;
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .hero {
+    padding: 3rem 1.2rem;
+    min-height: 60vh;
+  }
+
+  .trust-indicators {
+    gap: 1.5rem;
+  }
+
+  .indicator-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.8rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .price-table th,
+  .price-table td {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+}

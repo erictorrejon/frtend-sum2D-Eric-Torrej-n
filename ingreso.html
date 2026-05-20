@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingresar Equipo - TechFix</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">TechFix</div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#precio">Precio</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="#ingresar-equipo" class="cta">Ingresar equipo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="ingresar-equipo" class="section ingresar-page">
+      <h1>Ingresar mi Equipo</h1>
+      <p class="section-description">Completa el formulario para que nuestro equipo revise tu dispositivo</p>
+      
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="nombre">Nombre completo *</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo electrónico *</label>
+          <input type="email" id="email" name="email" required placeholder="tu@email.com">
+        </div>
+
+        <div class="form-group">
+          <label for="telefono">Teléfono *</label>
+          <input type="tel" id="telefono" name="telefono" required placeholder="+56 9 xxxx xxxx">
+        </div>
+
+        <div class="form-group">
+          <label for="dispositivo">Tipo de dispositivo *</label>
+          <select id="dispositivo" name="dispositivo" required>
+            <option value="">Selecciona tu dispositivo</option>
+            <option value="notebook">Notebook</option>
+            <option value="computador">Computador de Escritorio</option>
+            <option value="tablet">Tablet</option>
+            <option value="smartphone">Smartphone</option>
+            <option value="impresora">Impresora</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="marca">Marca del dispositivo *</label>
+          <input type="text" id="marca" name="marca" required placeholder="Ej: HP, Dell, Apple...">
+        </div>
+
+        <div class="form-group">
+          <label for="modelo">Modelo *</label>
+          <input type="text" id="modelo" name="modelo" required placeholder="Modelo del dispositivo">
+        </div>
+
+        <div class="form-group">
+          <label for="descripcion">Descripción del problema *</label>
+          <textarea id="descripcion" name="descripcion" required placeholder="Describe detalladamente qué problemas presenta tu equipo" rows="5"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="servicio">Servicio requerido *</label>
+          <select id="servicio" name="servicio" required>
+            <option value="">Selecciona un servicio</option>
+            <option value="diagnostico">Diagnóstico técnico</option>
+            <option value="reparacion">Reparación</option>
+            <option value="mantenimiento">Mantenimiento preventivo</option>
+            <option value="actualizacion">Actualización de hardware</option>
+            <option value="so">Instalación de SO</option>
+            <option value="soporte-remoto">Soporte remoto</option>
+          </select>
+        </div>
+
+        <button type="submit" class="button primary-btn">Enviar solicitud</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 TechFix. Servicio técnico, repuestos y soporte remoto.</p>
+  </footer>
+
+  <style>
+    .ingresar-page h1 {
+      text-align: center;
+      color: #0d1b33;
+      margin-bottom: 2rem;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(22, 43, 86, 0.08);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #0d1b33;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 0.75rem 1rem;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #ff8c42;
+      box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+    }
+
+    .contact-form .primary-btn {
+      width: 100%;
+      margin-top: 1rem;
+    }
+  </style>
+</body>
+</html>

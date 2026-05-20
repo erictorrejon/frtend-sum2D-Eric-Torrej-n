@@ -1,0 +1,80 @@
+======================================================================================================================================================
+Etapa del proyecto: [ETAPA 1] 
+
+Fecha: 20/05/2026
+
+PROMPT ENVIADO A COPILOT: genera una estructura base de una página web para una empresa llamada "TechFix",
+esta empresa se dedica a entregar servicio técnico especializado en reparación y mantenimiento de computadores de escritorio,
+notebooks, impresoras y dispositivos móvilesm a su vez entrega venta de repuestos electrónicos, actualización de hardware y
+soporte remoto.
+IMPORTANTE:
+Esta página debe de tener el nombre de la empresa en la parte izquiera de la barra de navegación, a su vez links de navegación como:
+Inicio, Servicios, Precio, Nosotros y por ultimo Ingresar equipo.
+
+RESPUESTA RECIBIDA: Me entregó la página base generada 
+
+USO EN EL PROYECTO: Utilicé la página base que me generó sin corregir ni solicitar algo más ya que me entregó una página base bien 
+completa y con una estructura bien definida de primeras. Me quedé con este primer prototipo ya que lo que se me entregó es exatcamente
+el prototipo de base que buscaba.
+
+REFLEXIÓN PERSONAL: Como lo expliqué arriba, me fue útil el prompt ya que me esmeré harto en darle un prompt completo y de primeras con 
+indicacionea a seguir, obtuve lo que esperaba por esto mismo, de ser detallado en el prompt y quizá cambiaría la estructura que le di al prompt,
+a algo más organizado.
+======================================================================================================================================================
+
+======================================================================================================================================================
+Etapa del proyecto: [ETAPA 1] 
+
+Fecha: 20/05/2026
+
+PROMPT ENVIADO A COPILOT: ahora nos centraremos en la Sección Hero, vamos a progresar en la página agregando lo siguente:
+- Imagen de fondo relacionada con la tecnología o reparación de computadores.
+-Titulo principal con el nombre del servicio técnico (etiqueta h1).
+- Slogan que transmita confianza y rapidéz.
+- Boton principal "Ingresar mi equipo" que redirija a ingreso.html
+- Indicadores visuales de confianza, ejemplos: "Diagnóstico gratuito", "Garantía escrita", "Más de 8 años de experiencia". Pueden ser tres iconos 
+  con texto corto debajo del hero.
+
+ahora nos iremos a la seccion de Servicios.
+
+estas deben de mostrar los servicios que ofrece TechFix en formato de tarjetas, estas deben de ser:
+- Reparación de notebooks.
+-Cambio de pantalla.
+-limpieza y mantenimiento preventivo.
+-Instalación y reinstalación de sistemaa oertivo.
+-Soporte remoto.
+-Venta de repuestos y accesorios.
+
+Cada tarjerta debe incluir un icono o imagen, el nombre del servicio, una breve descripción y un tiempo de resolución estimada,
+ ejemplo, "Tiempo estimado: 24-48 hs". Las tarjetas deben de organizarse en una grilla de al menos tres columnas en pantallas de escritorio.
+
+Sección Marcas y Dispositivos Atendidos
+esta debe de mostrar las marcas o dispositivos que el servicio tecnico atiende, Minimo 6. muestra una lista estilizada con iconos.
+ ejemplos: HP, Dell, Lenovo, Apple, Samsung, Asus, Acer, Impresoras Canon y Epson.
+
+Seccion Tabla de Precios Referenciales
+Muestra una tabla HTML con precios referenciales de los servicios más comunes, Esta tabla debe de incluir al menos 6 filas con las
+ columnas: Servicio, Precio desde y Tiempo Estimado. La tabla debe de estar estilizada con CSS (cabecera con color de fondo, filas alternadas, bordes).
+
+RESPUESTA RECIBIDA: Recibí un cambio drástico en la página web
+
+USO EN EL PROYECTO: Utilicé lo entregado por copilot de primeras ya que al entregarlo un prompt bien elaborado y específico, este cumplió con lo pedido
+modifiqué el orden de algunos emojis pero era algo superficial y que no influía en nada a la visión y objetivo de la página web. Tomé y me quedé con la
+página que me dio por que me dio justamente lo que le pedí.
+
+REFLEXIÓN PERSONAL: Fue útil el prompt que le di, ya que al ser bien extenso, le di las indicaciones necesarias y bien directas.
+======================================================================================================================================================
+
+======================================================================================================================================================
+Etapa del proyecto: [ETAPA 1] 
+
+Fecha: 20/05/2026
+
+PROMPT ENVIADO A COPILOT: 
+
+RESPUESTA RECIBIDA: 
+
+USO EN EL PROYECTO: 
+
+REFLEXIÓN PERSONAL: 
+======================================================================================================================================================
